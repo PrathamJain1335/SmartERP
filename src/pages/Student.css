@@ -1,0 +1,143 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  color: #1A1A1A;
+}
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 230px;
+  background: #F6F6F6;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 7px rgba(0,0,0,0.03);
+}
+.sidebar-item {
+  padding: 12px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px 20px 20px 5px;
+  margin-bottom: 5px;
+  transition: background 0.22s;
+}
+.sidebar-item .icon { margin-right: 12px; font-size: 20px; }
+.sidebar-item:hover,
+.sidebar-item:focus,
+.sidebar-item.active {
+  background: #FF7E65;
+  color: #fff;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #FCFCFC;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 32px 8px 32px;
+  background: #fff;
+  border-bottom: 1px solid #EDEDED;
+}
+.caps-icon { font-size: 32px; vertical-align: middle; margin-right: 8px;}
+.top-icons { font-size: 24px; display: flex; gap: 18px; }
+.profile-icon { cursor: pointer; padding: 2px 7px; border-radius: 50%; transition: background 0.2s;}
+.profile-icon:hover { background: #F1BCA6; }
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 14px;
+  padding: 30px 32px 0 32px;
+}
+.widget {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 18px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  min-width: 275px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+}
+.schedule-widget,
+.attendance-widget,
+.announcements-widget,
+.assignments-widget {
+  max-height: 260px;
+  overflow-y: auto;
+}
+.schedule-item { margin-bottom: 7px; }
+.attendance-widget { align-items: center;}
+.piechart { margin-bottom: 8px; }
+.attendance-list { margin-top: 6px;}
+.attendance-list > div {
+  display: flex; justify-content: space-between;
+  border-bottom: 1px solid #F5E3DD;
+  padding: 4px 0;
+  font-size: 20px;
+}
+.announcements-widget > div { margin-bottom: 4px; }
+.assignments-widget table {
+  width: 100%; border-collapse: collapse;
+  font-size: 20px;
+}
+.assignments-widget th, .assignments-widget td {
+  padding: 8px 4px; text-align: left;
+  border-bottom: 1px solid #F3F3F3;
+}
+.assignment-row { cursor: pointer; transition: background 0.15s; }
+.assignment-row:hover td { background: #FFE7DF; color: #FC6C58; }
+.assignment-details {
+  background: #FFF6F0;
+  border-left: 2px solid #FF7E65;
+  padding: 9px 16px;
+  margin-top: 8px;
+  border-radius: 9px;
+}
+.assignment-details ul { margin: 0 0 0 16px;}
+.assignment-details button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #FC6C58;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.profile-section {
+  background: #fff;
+  margin: 28px 38px;
+  border-radius: 15px;
+  padding: 34px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  min-width: 320px;
+}
+.profile-section h2 { margin-bottom: 22px; }
+.dashboard-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  font-size: 15px;
+  padding: 14px 0;
+  color: #B4B4B4;
+  border-top: 1px solid #EDEDED;
+  margin-top: auto;
+}
+.scrollable { overflow-y: auto; }
+
+@media (max-width: 1100px) {
+  .dashboard-widgets {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+}
