@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // import useNavigate
 import "./App.css";
 import logo from "./assets/logo.png";
 import background from "./assets/bg.png";
@@ -7,12 +8,18 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); // hook to navigate
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your authentication logic here
-    alert(`Username: ${username}\nPassword: ${password}`);
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  // Hardcoded login for demo only
+  if (username === "student" && password === "student123") {
+    navigate("/dashboard");
+  } else {
+    alert("Invalid credentials. Try username: admin / password: admin123");
+  }
+};
+
 
   return (
     <div className="background" style={{ backgroundImage: `url(${background})` }}>
@@ -28,7 +35,6 @@ export default function App() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              
             />
             <div className="password-wrapper">
               <input
