@@ -1,16 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App.jsx";
-import StudentDashboard from "./pages/Student.jsx";
-import "./index.css"; // global styles
+import App from "./App.jsx"; // Login Page
+import StudentDashboard from "./pages/Student.jsx"; // Student Dashboard
+import FacultyDashboard from "./pages/Faculty.jsx"; // Faculty Dashboard
+import "./index.css"; // Global CSS
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        {/* Default Login / Landing */}
         <Route path="/" element={<App />} />
-        <Route path="/dashboard" element={<StudentDashboard />} />
+
+        {/* Student Dashboard */}
+        <Route path="/student" element={<StudentDashboard />} />
+
+        {/* Faculty Dashboard */}
+        <Route path="/faculty" element={<FacultyDashboard />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
