@@ -1,25 +1,29 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // import useNavigate
+import { useNavigate } from "react-router-dom";
+
+import FacultyDashboard from "./pages/Faculty.jsx";
+import StudentDashboard from "./pages/Student.jsx";
+
 import "./App.css";
 import logo from "./assets/logo.png";
 import background from "./assets/bg.png";
 
-export default function App() {
+function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate(); // hook to navigate
+  const navigate = useNavigate();
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  // Hardcoded login for demo only
-  if (username === "student" && password === "student123") {
-    navigate("/dashboard");
-  } else {
-    alert("Invalid credentials. Try username: admin / password: admin123");
-  }
-};
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (username === "student" && password === "student123") {
+      navigate("/student");   // student route
+    } else if (username === "faculty" && password === "faculty123") {
+      navigate("/faculty");   // faculty route
+    } else {
+      alert("Invalid credentials. Try student or faculty with respective passwords.");
+    }
+  };
 
   return (
     <div className="background" style={{ backgroundImage: `url(${background})` }}>
@@ -56,18 +60,19 @@ const handleSubmit = (e) => {
                 &#128065;
               </span>
             </div>
-            <button type="submit" className="login-button">
-              Log In
-            </button>
+            <button type="submit" className="login-button">Log In</button>
           </form>
-          <div className="forgot">
-            Forgot Password? <a href="#">Click here</a>
-          </div>
+          <div className="forgot">Forgot Password? <a href="#">Click here</a></div>
           <div className="address">
-            Plot No. IS-2036 to IS-2039 Ramchandrapura Industrial Area, Sitapura, Vidhani, Jaipur, Rajasthan 303905
+            Plot No. IS-2036 to IS-2039 Ramchandrapura Industrial Area,
+            Sitapura, Vidhani, Jaipur, Rajasthan 303905
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+export default function App() {
+  return <LoginPage />;
 }
