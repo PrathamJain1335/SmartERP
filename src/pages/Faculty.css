@@ -1,0 +1,491 @@
+/* Faculty Dashboard CSS */
+body, html {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+}
+
+.faculty-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e5eaf2;
+}
+
+.faculty-login-box {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.faculty-login-box h2 {
+  margin-bottom: 1.5rem;
+}
+
+.faculty-login-box label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: .25rem;
+}
+
+.faculty-login-box input {
+  width: 100%;
+  padding: .5rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  margin-bottom: .75rem;
+}
+
+.faculty-login-box button {
+  background: #ee4a4a;
+  color: #fff;
+  border: none;
+  padding: .7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.faculty-dashboard-main {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background: #f8f8f8;
+  position: relative;
+}
+
+.sidebar {
+  background: #f6f1ef;
+  min-width: 250px;
+  width: 18vw;
+  border-right: 2px solid #e5eaea;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  padding-bottom: 20px;
+}
+
+.sidebar-icon {
+  margin-right: 14px;
+  width: 28px;
+  height: 28px;
+}
+
+.sidebar-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  padding: .85rem 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 2px;
+  border-radius: 7px;
+  transition: background 0.22s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar nav li.active, .sidebar nav li:focus, .sidebar nav li:hover:not(.active) {
+  background: #ee4a4a;
+  color: #fff;
+}
+
+.sidebar-support {
+  margin-top: auto;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.07rem;
+  color: #333;
+}
+
+.dashboard-content {
+  flex: 1 1 auto;
+  padding: 2.2rem 2.2vw 2rem 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top alerts styling */
+.dashboard-top-alerts {
+  display: flex;
+  gap: 1.3rem;
+  margin-bottom: 0.1rem;
+}
+.top-box {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 9px rgba(219, 219, 219, 0.09);
+  padding: 0.8rem 2.7rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #ee4a4a;
+  color: #ee4a4a;
+  font-size: 1.02rem;
+  transition: box-shadow 0.18s;
+}
+
+/* Table styling */
+.class-schedule-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.class-schedule-table-container {
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 7px #e0e0e5;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 12px;
+}
+
+.class-schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 950px;
+}
+
+.class-schedule-table th, .class-schedule-table td {
+  border: 1.7px solid #e3e3e3;
+  padding: 0.8em 1.1em;
+  font-size: 1.01em;
+  text-align: center;
+  background: #faf9f7;
+  min-width: 100px;
+  max-width: 250px;
+  min-height: 48px;
+}
+
+.class-schedule-table th {
+  background: #efefef;
+  font-weight: bold;
+}
+
+.tt-cell-highlight {
+  font-weight: 600;
+  color: #333;
+  border: 2.5px solid #c2c2c2;
+  box-shadow: 0 0 7px rgba(223,212,212,0.09);
+}
+
+/* Flex-row (Approvals + Marks Upload) */
+.dashboard-flex-row {
+  display: flex;
+  gap: 2.1rem;
+  flex-wrap: wrap;
+}
+
+/* Approvals */
+.pending-approvals-section {
+  flex: 1 1 23%;
+  min-width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px #f0eee8;
+  padding: 1.2rem 1rem 1rem 1rem;
+  max-height: 330px;
+  display: flex;
+  flex-direction: column;
+}
+
+.approvals-list.scrollable {
+  overflow-y: auto;
+  max-height: 225px;
+  padding-right: 8px;
+}
+
+.approval-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.approval-item.approved {
+  color: green;
+  font-weight: 600;
+}
+
+.approval-item.rejected {
+  color: #ee4a4a;
+  font-weight: 600;
+}
+
+.approve-btn {
+  background: #13ba7d;
+  color: #fff;
+  border: none;
+  padding: .5em 1em;
+  border-radius: 5px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: .97em;
+  transition: background 0.13s;
+}
+
+.reject-btn {
+  background: #ee4a4a;
+  color: #fff;
+  border: none;
+  padding: .5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: .97em;
+  transition: background 0.13s;
+}
+
+.approval-status {
+  padding: .17em .9em;
+  border-radius: 11px;
+  background: #f5f5f5;
+  border: 1.3px solid #e3e3e3;
+  font-size: .99em;
+}
+
+/* Marks Upload Section */
+.marks-upload-section {
+  flex: 2 2 46%;
+  min-width: 340px;
+  background: #fff;
+  padding: 1.2rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px #eeeef0;
+  display: flex;
+  flex-direction: column;
+}
+
+.marks-upload-types {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: .8rem;
+  align-items: center;
+}
+
+.upload-btn {
+  background: #ee4a4a;
+  color: #fff;
+  border: none;
+  padding: .5em 1em;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.pending-classes-for-marks {
+  font-size: 1em;
+  color: #adadad;
+  margin-bottom: .6rem;
+}
+
+.student-assignments-list {
+  margin-top: .6rem;
+}
+
+.student-assignments-list h4 {
+  font-size: 1em;
+  margin-bottom: .34rem;
+}
+
+.student-assignments-list .scrollable {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.student-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: space-between;
+  padding: .5em 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.view-assignment-btn {
+  background: #2092f7;
+  border: none;
+  color: #fff;
+  padding: .32em .85em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.13s;
+}
+
+.marks-display {
+  font-size: .97em;
+  color: #555;
+  font-weight: 500;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(51,51,51,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.8rem 2.2rem;
+  border-radius: 8px;
+  width: 410px;
+  max-width: 96vw;
+  box-shadow: 0 3px 17px rgba(43,37,57,0.19);
+  position: relative;
+}
+
+.assignment-view-section {
+  margin-top: .6rem;
+  margin-bottom: .35rem;
+}
+
+.pdf-viewer {
+  border: 1.3px solid #e3e3e3;
+  border-radius: 8px;
+}
+
+.modal-close-btn {
+  background: #eee;
+  color: #333;
+  border: none;
+  padding: .4em 1em;
+  margin-right: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-submit-btn {
+  background: #13ba7d;
+  color: #fff;
+  border: none;
+  padding: .43em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: .5em;
+}
+
+/* Notifications & Duties */
+.notifications-duties-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px #f0eee8;
+  padding: 1.2rem 1rem 1rem 1rem;
+  font-size: 1.02em;
+  min-width: 275px;
+  margin-top: .8rem;
+}
+
+.notifications-duties-section h3 {
+  margin-bottom: .41rem;
+  font-size: 1.14em;
+  font-weight: 700;
+}
+
+.notifications-duties-section ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style: disc;
+}
+
+.notifications-duties-section li {
+  margin-bottom: .33em;
+}
+
+/* Footer */
+.faculty-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: #444;
+  font-size: .97em;
+  background: #eaeaea;
+  padding: .8rem 1.6rem;
+  border-radius: 6px;
+}
+
+/* Top-right icons */
+.dashboard-top-icons {
+  position: absolute;
+  right: 2vw;
+  top: 22px;
+  display: flex;
+  gap: 16px;
+}
+.icon-bell, .icon-chat, .icon-user {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-size: contain;
+}
+.icon-bell {
+  background-image: url('/icons/bell.svg');
+}
+.icon-chat {
+  background-image: url('/icons/chat.svg');
+}
+.icon-user {
+  background-image: url('/icons/user.svg');
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .sidebar { min-width: 180px; }
+  .dashboard-content { padding: 1.1rem 1vw; }
+  .class-schedule-table { min-width: 750px; }
+}
+
+@media (max-width: 900px) {
+  .faculty-dashboard-main { flex-direction: column; }
+  .sidebar { position: relative; height: auto; min-width: 100%; width: 100vw; }
+  .dashboard-content { padding: 1.1rem 2vw;}
+  .dashboard-flex-row { flex-direction: column; }
+}
+
+/* Custom Scrollbars */
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+  background: #efefef;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background: #ee4a4a;
+  border-radius: 15px;
+}
+
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #ee4a4a #efefef;
+}
+
+/* Hide scrollbars visually for modal overlays */
+.modal-overlay::-webkit-scrollbar { display: none; }
+.modal-overlay { scrollbar-width: none; }
