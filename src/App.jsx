@@ -19,7 +19,10 @@ function LoginPage() {
     if (username === "student" && password === "student123") {
       navigate("/student");   // student route
     } else if (username === "faculty" && password === "faculty123") {
-      navigate("/faculty");   // faculty route
+      navigate("/faculty");
+      
+    } else if (username === "admin" && password === "admin123") {
+      navigate("/admin");// faculty route
     } else {
       alert("Invalid credentials. Try student or faculty with respective passwords.");
     }
