@@ -5,7 +5,7 @@ import "./admin.css";
 const icons = {
   dashboard: "/icons/dashboard.svg",
   faculty: "/icons/faculty.svg",
-  students: "/icons/students.svg",
+  students: "/icons/student.svg",
   achievements: "/icons/achievements.svg",
   reports: "/icons/reports.svg",
   examination: "/icons/examination.svg",
@@ -18,8 +18,11 @@ const icons = {
   chat: "/icons/chat.svg",
   profile: "/icons/profile.svg",
   logout: "/icons/logout.svg",
-  arrowLeft: "/icons/arrow-left.svg",
-  arrowRight: "/icons/arrow-right.svg",
+  arrowLeft: "/icons/angle-left.png",
+  arrowRight: "/icons/angle-right.png",
+  download: "/icons/download.svg" ,
+  user: "/icons/user.png",
+  button: "/icons/button.svg"
 };
 
 const departments = [
@@ -129,7 +132,7 @@ export default function Admin() {
         {profileOpen && (
           <div className="profile-menu">
             <button>
-              <img src={icons.profile} alt="Profile" /> Profile
+              <img src={icons.user} alt="Profile" /> Profile
             </button>
             <button onClick={() => window.location.assign("/login")}>
               <img src={icons.logout} alt="Logout" /> Logout
@@ -385,7 +388,7 @@ export default function Admin() {
                 </table>
               )}
               <button className="export-btn">
-                <img src={icons.reports} alt="Export" className="export-icon" />
+                <img src={icons.download} alt="Export" className="export-icon" />
                 Export Report
               </button>
             </div>
