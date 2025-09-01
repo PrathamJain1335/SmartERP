@@ -110,14 +110,14 @@ body, html {
   background-size: cover;
 }
 .icon-bell {
-  background-image: url('/icons/bell.png');
+  background-image: url('/icons/bell.psvg');
 }
 .icon-chat {
-  background-image: url('/icons/chat.png');
+  background-image: url('/icons/chat.svg');
   
 }
 .icon-user {
-  background-image: url('/icons/user.webp');
+  background-image: url('/icons/user.png');
   cursor: pointer;
 }
 .profile-icon {
