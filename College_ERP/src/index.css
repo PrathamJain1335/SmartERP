@@ -1,0 +1,4 @@
+@tailwind base; /* Import Tailwind's base styles */
+@tailwind components;
+@tailwind utilities;
+/* You can add your custom styles here */

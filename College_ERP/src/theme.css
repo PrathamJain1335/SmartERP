@@ -1,0 +1,26 @@
+:root {
+  --bg: #f6f7fb;          /* Light background */
+  --card: #ffffff;        /* Light card background */
+  --border: #e5e7eb;      /* Light border */
+  --text: #1e293b;        /* Darker text for readability */
+  --muted: #64748b;       /* Subtle muted text */
+  --accent: #dc2626;      /* Professional red accent */
+  --soft: #fee2e2;        /* Soft red for highlights */
+  --brand: #a60514;       /* Brand primary color */
+  --hover: #f3f4f6;       /* Light hover effect */
+  --active: #991b1b;      /* Darker active state */
+}
+
+.dark-root {
+  color-scheme: dark;
+  --bg: #0b1120;          /* Dark background */
+  --card: #1e293b;        /* Dark card background */
+  --border: #334155;      /* Dark border */
+  --text: #e2e8f0;        /* Light text for contrast */
+  --muted: #94a3b8;       /* Muted text in dark mode */
+  --accent: #dc2626;      /* Consistent accent color */
+  --soft: #2b0e11;        /* Dark soft highlight */
+  --brand: #a60514;       /* Consistent brand color */
+  --hover: #2a3442;       /* Dark hover effect */
+  --active: #991b1b;      /* Consistent active state */
+}
