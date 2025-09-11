@@ -52,10 +52,10 @@ export default function Students({ students = [] }) {
 
   // Mock student records
   const mockDocuments = [
-    { type: "Aadhaar Card", url: "https://via.placeholder.com/400x250" },
+    { type: "Aadhaar Card", url: "./image1.png" },
     { type: "College ID", url: "https://via.placeholder.com/400x250" },
-    { type: "10th Marksheet", url: "https://via.placeholder.com/400x250" },
-    { type: "12th Marksheet", url: "https://via.placeholder.com/400x250" },
+    { type: "10th Marksheet", url: "./image2.png" },
+    { type: "12th Marksheet", url: "./image2.png" },
   ];
 
   return (

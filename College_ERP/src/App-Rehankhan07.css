@@ -1,0 +1,128 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 100%;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 0;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  
+}
+
+.login-container {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  /* backdrop-filter: blur(8px); */ /* Comment out to test */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 18px 0 24px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 2.5px 12px 1rem;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 2px solid #D32F2F;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.95);
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: #B71C1C;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* width: 320px; */
+}
+
+.input-field[type="password"], .input-field[type="text"] {
+  width: 100%;
+  padding-right: 2.5rem; 
+}
+
+.eye-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.login-button {
+  width: 360px;
+  padding: 14px 0;
+  margin: 18px 0;
+  background-color: #D32F2F;
+  color: #fff;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.login-button:hover {
+  background: #B71C1C;
+}
+
+.forgot {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+}
+.forgot a {
+  color: #1565C0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.address {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+}
+.address a {
+  color: #1565C0;
+  text-decoration: underline;
+}
