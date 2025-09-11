@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import FacultyDashboard from "C:/Users/tokir/OneDrive/Desktop/Project/College_ERP/src/Faculty";
+import FacultyDashboard from "/src/Faculty";
 // import StudentDashboard from "src/Student.jsx";
-import AdminDashboard from "C:/Users/tokir/OneDrive/Desktop/Project/College_ERP/src/Admin.jsx";
+import AdminDashboard from "/src/Admin.jsx";
 import "../App.css";
 import logo from "../assets/logo.png";
 import background from "../assets/bg.png";
 
 function LoginPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("") ;
+  const [password, setPassword] = useState("") ;
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -45,25 +45,30 @@ function LoginPage() {
               required
             />
             <div className="password-wrapper">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                className="input-field"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <span
-                className="eye-icon"
-                onClick={() => setShowPassword((v) => !v)}
-                style={{ cursor: "pointer" }}
-                role="button"
-                tabIndex={0}
-                aria-label={showPassword ? "Hide password" : "Show password"}
-              >
-                &#128065;
-              </span>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                className="input-field"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <span
+                className="eye-icon"
+                onClick={() => setShowPassword((v) => !v)}
+                style={{ cursor: "pointer" }}
+                role="button"
+                tabIndex={0}
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                &#128065;
+              </span>
             </div>
+
+                
+              
+              
+            
             <button type="submit" className="login-button">Log In</button>
           </form>
           <div className="forgot">Forgot Password? <a href="#">Click here</a></div>
